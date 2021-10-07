@@ -1,7 +1,7 @@
-import NavigationBar from "./components/NavigationBar";
+import NavigationBar from "./components/NavigationBar";/*
 import OpeningPage from "./components/OpeningPage";
 import NewPassword from "./components/NewPassword";
-import CreateAccount from "./components/CreateAccount";
+import CreateAccount from "./components/CreateAccount";*/
 import NewForm from "./components/new-form/NewForm";
 
 import "./styles/app.css";
@@ -12,10 +12,7 @@ function App() {
       <NavigationBar/>
       <main>
         <NewForm/>
-      </main>{/*
-      <main>
-        <NewForm/>
-      </main>*/}
+      </main>
     </>
   );
 }
