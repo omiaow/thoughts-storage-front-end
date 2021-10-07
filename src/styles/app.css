@@ -1,0 +1,16 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  min-width: 300px;
+  margin: 0;
+}
+
+body{
+  font-family:Arial, Verdana, Helvetica, sans-serif;
+  position: relative;
+}
+
+main {
+  float: left;
+  width: 100%;
+}

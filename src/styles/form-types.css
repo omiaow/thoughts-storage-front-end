@@ -1,0 +1,165 @@
+.form-card {
+  width: 84%;
+  margin: 10px calc(8% - 1px);
+  border: 1px solid white;
+  border-radius: 8px;
+  padding: 5px 0 0 0;
+  float: left;
+}
+
+.form-card .title {
+  resize: horizontal;
+  padding: 5px;
+  width: calc(90% - 10px);
+  min-height: 27px;
+  background-color: #06141C;
+  color: white;
+  margin: 10px 5%;
+  border-radius: 5px;
+  font-size: 20px;
+  line-height: 27px;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  outline: none;
+}
+
+.form-card .title:hover, .form-card .title:focus {
+  background-color: white;
+  color: #06141C;
+}
+
+.form-card .check {
+  float: left;
+  width: 15px;
+  height: 15px;
+  border: 5px solid white;
+  border-radius: 6px;
+  margin: 15px 10px 5px 15px;
+  cursor: pointer;
+}
+
+.form-card .radio {
+  float: left;
+  width: 15px;
+  height: 15px;
+  border: 5px solid white;
+  margin: 15px 10px 5px 15px; /* total width = 15w + (15 + 10)m + (5 + 5)b = 50 */
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.form-card .option {
+  float: left;
+  padding: 5px;
+  width: calc(95% - 65px);
+  min-height: 27px;
+  background-color: #06141C;
+  color: white;
+  margin: 10px 5% 10px 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 20px;
+  line-height: 27px;
+}
+
+.form-card .option:hover {
+  background-color: white;
+  color: #06141C;
+}
+
+.form-card .add {
+  float: left;
+  font-size: 17px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  margin: 30px 0px 15px 15px;
+  cursor: pointer;
+  background: url("images/add-1.png");
+  background-repeat: no-repeat;
+  background-size: 80% 80%;
+  background-position: center;
+}
+
+.form-card .add:hover {
+  background: url("images/add-2.png");
+  background-repeat: no-repeat;
+  background-size: 80% 80%;
+  background-position: center;
+  background-color: white;
+}
+
+.form-card .remove {
+  float: left;
+  font-size: 17px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  margin: 30px 0px 15px 15px;
+  cursor: pointer;
+  background: url("images/remove-1.png");
+  background-repeat: no-repeat;
+  background-size: 80% 80%;
+  background-position: center;
+}
+
+.form-card .remove:hover {
+  background: url("images/remove-2.png");
+  background-repeat: no-repeat;
+  background-size: 80% 80%;
+  background-position: center;
+  background-color: white;
+}
+
+.form-card .text {
+  padding: 5px 10px;
+  width: calc(90% - 20px); /* subtract padding */
+  height: 25px;
+  border-radius: 6px;
+  margin: 15px 5% 5px 5%;
+  background-color: white;
+  color: grey;
+  font-size: 20px;
+  cursor: text;
+}
+
+.form-card .paragraph {
+  padding: 5px 10px;
+  width: calc(90% - 20px); /* subtract padding */
+  height: 100px;
+  border-radius: 6px;
+  margin: 15px 5% 5px 5%;
+  background-color: white;
+  color: grey;
+  font-size: 20px;
+  cursor: text;
+}
+
+.form-card .date {
+  text-align: center;
+  padding: 5px 10px;
+  width: calc(90% - 20px); /* subtract padding */
+  height: 25px;
+  border-radius: 6px;
+  margin: 15px 5% 5px 5%;
+  background-color: white;
+  color: #06141C;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.form-card .upload {
+  text-align: center;
+  padding: 5px 10px;
+  width: calc(90% - 20px); /* subtract padding */
+  height: 25px;
+  border-radius: 6px;
+  margin: 15px 5% 5px 5%;
+  background-color: white;
+  color: #06141C;
+  font-size: 20px;
+  cursor: pointer;
+}

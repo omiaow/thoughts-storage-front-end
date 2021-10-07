@@ -1,0 +1,133 @@
+.background-side {
+	background-color: rgba(0, 0, 0, .4);
+  position: fixed;
+  top:0px;
+  right:0px;
+  bottom:0px;
+  left:0px;
+  z-index: 3;
+}
+
+ .control-window {
+  float: left;
+  background-color: white;
+}
+
+/* Desktop devices */
+@media only screen and (min-width: 600px) {
+   .control-window {
+    width: 360px;
+    min-height: 200px;
+    margin: 100px calc(50% - 180px);
+  }
+}
+
+/* Other devices */
+@media only screen and (max-width: 600px) {
+   .control-window {
+    width: 100%;
+    height: 100vh;
+  }
+}
+
+ .control-window .name{
+  margin: 10px 0 0 5%;
+  width: 70%;
+  height: 40px;
+  float: left;
+  color: #06141C;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+ .control-window .exit {
+  margin: 10px 3% 0 0;
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  font-size: 40px;
+  float: right;
+  text-align: center;
+  transform: rotate(-45deg);
+  cursor: pointer;
+  background: url("images/add-1.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+	background-color: #06141C;
+}
+
+ .control-window .exit:hover {
+   background: url("images/add-2.png");
+   background-repeat: no-repeat;
+   background-size: 100% 100%;
+}
+
+/* Part - Add new form */
+ .control-window .list {
+  float: left;
+  width: 100%;
+  min-height: 100px;
+  margin-top: 10px;
+}
+
+ .control-window .list .type {
+  float: left;
+  width: 100px;
+  min-height: 150px;
+  cursor: pointer;
+  margin: 10px 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+ .control-window .list .type:hover {
+  background-color: lightgrey;
+}
+
+.type .check, .type .radio, .type .text, .type .paragraph, .type .date, .type .upload {
+  width: 80px;
+  min-height: 80px;
+  margin: 10px;
+}
+
+.type .check {
+  background: url("images/check.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.type .radio {
+  background: url("images/radio.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.type .text {
+  background: url("images/text.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.type .paragraph {
+  background: url("images/paragraph.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.type .date {
+  background: url("images/date.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.type .upload {
+  background: url("images/upload.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+ .control-window .list .type span {
+  color: #06141C;
+  font-size: 14px;
+  padding: 5px auto;
+}

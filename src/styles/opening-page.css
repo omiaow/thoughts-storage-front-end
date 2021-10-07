@@ -1,0 +1,65 @@
+.opening-screen {
+  float: left;
+  width: 100%;
+  background-color: #06141C;
+}
+
+.opening-screen .developer-description {
+  float: left;
+  min-height: calc(100vh - 60px); /* subtract navigation bar */
+  background-color: #06141C;
+  color: white;
+  text-align: center;
+}
+
+/* Desktop devices */
+@media only screen and (min-width: 600px) {
+  .opening-screen .developer-description{
+    width: 50%;
+  }
+}
+
+/* Other devices */
+@media only screen and (max-width: 600px) {
+  .opening-screen .developer-description{
+    width: 100%;
+  }
+}
+
+.opening-screen .developer-description h1 {
+  color: white;
+  margin-top: 80px;
+  font-size: 45px;
+  font-family: 'Signika', sans-serif;
+  padding-bottom: 10px;
+}
+
+.opening-screen .developer-description p {
+  font-family: 'Inder', sans-serif;
+  line-height: 35px;
+  margin-bottom: 15px;
+  font-size: 28px;
+  width: 80%;
+  margin: auto;
+  color: lightgrey;
+}
+
+.opening-screen .developer-description button {
+  width: 150px;
+  height: 50px;
+  margin: 30px auto 0 auto;
+  border: 1px solid white;
+  border-radius: 8px;
+  background-color: #06141C;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.opening-screen .developer-description button:hover {
+  background-color: white;
+  color: #06141C;
+}
