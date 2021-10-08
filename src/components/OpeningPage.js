@@ -8,12 +8,12 @@ class NavigationBar extends React.Component {
       <div className="opening-screen">
         <div className="developer-description">
           <h1>Developers</h1>
-          <p>Create feedback, survey, questionnaire or test foms with Thought Storage and get your GET and POST requests. Or see the table and statistics of your survey.</p>
+          <p>Create feedback, survey, questionnaire or test foms and get your GET and POST requests. Or see the table and statistics of your survey.</p>
           <button>Get Started</button>
         </div>
         <div className="developer-description">
           <h1>Users</h1>
-          <p>Create feedback, survey, questionnaire or test forms with Thought Repository and see the table and statistics of your survey.</p>
+          <p>Create feedback, survey, questionnaire or test forms and see the table and statistics of your survey.</p>
           <button>Get Started</button>
         </div>
       </div>

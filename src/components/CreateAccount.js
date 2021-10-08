@@ -12,7 +12,7 @@ class CreateAccount extends React.Component {
           <input type="password" placeholder="Password"/>
           <input type="password" placeholder="Confirm password"/>
           <input type="submit" value="Create"/>
-          <a href="SignIn">Sign in</a>
+          <a className="a-left" href="SignIn">Sign in</a>
         </div>
       </div>
     );

@@ -29,24 +29,52 @@
   color: #06141C;
 }
 
-.form-card .check {
+.form-card .check-off {
   float: left;
-  width: 15px;
-  height: 15px;
-  border: 5px solid white;
+  width: 20px;
+  height: 20px;
   border-radius: 6px;
-  margin: 15px 10px 5px 15px;
+  margin: 17px 10px 5px 15px;
   cursor: pointer;
+  background: url("images/check-off.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
-.form-card .radio {
+.form-card .check-on {
   float: left;
-  width: 15px;
-  height: 15px;
-  border: 5px solid white;
-  margin: 15px 10px 5px 15px; /* total width = 15w + (15 + 10)m + (5 + 5)b = 50 */
-  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  margin: 17px 10px 5px 15px;
   cursor: pointer;
+  background: url("images/check-on.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.form-card .radio-off {
+  float: left;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  margin: 17px 10px 5px 15px;
+  cursor: pointer;
+  background: url("images/radio-off.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.form-card .radio-on {
+  float: left;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  margin: 17px 10px 5px 15px;
+  cursor: pointer;
+  background: url("images/radio-on.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 .form-card .option {
@@ -57,13 +85,17 @@
   background-color: #06141C;
   color: white;
   margin: 10px 5% 10px 5px;
-  cursor: pointer;
+  cursor: text;
   border-radius: 5px;
   font-size: 20px;
   line-height: 27px;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  outline: none;
 }
 
-.form-card .option:hover {
+.form-card .option:hover, .form-card .option:focus {
   background-color: white;
   color: #06141C;
 }
@@ -74,21 +106,18 @@
   width: 30px;
   height: 30px;
   border: none;
-  border-radius: 5px;
+  border-radius: 50%;
   margin: 30px 0px 15px 15px;
   cursor: pointer;
-  background: url("images/add-1.png");
+  background: url("images/add-3.png");
   background-repeat: no-repeat;
-  background-size: 80% 80%;
-  background-position: center;
+  background-size: 100% 100%;
 }
 
 .form-card .add:hover {
-  background: url("images/add-2.png");
+  background: url("images/add-1.png");
   background-repeat: no-repeat;
-  background-size: 80% 80%;
-  background-position: center;
-  background-color: white;
+  background-size: 100% 100%;
 }
 
 .form-card .remove {
@@ -97,7 +126,7 @@
   width: 30px;
   height: 30px;
   border: none;
-  border-radius: 5px;
+  border-radius: 50%;
   margin: 30px 0px 15px 15px;
   cursor: pointer;
   background: url("images/remove-1.png");

@@ -11,22 +11,38 @@ class GeneratingForm extends React.Component {
   }
 
   editTitleOnBlur = (e) => {
-    if (e.target.innerText.length === 0) {
+    if (e.target.innerText === "\n" || e.target.innerText.length === 0) {
       this.props.data.title = "Question or task";
       this.props.editForm(this.props.id, this.props.data);
     }
   }
 
   editOption = (e, id) => {
-    this.props.data.options[id].title = e.target.innerText;
+    this.props.data.options[id].title = e.target.value;
     this.props.editForm(this.props.id, this.props.data);
   }
 
   editOptionOnBlur = (e, id) => {
-    if (e.target.innerText.length === 0) {
+    if (e.target.innerText === "\n" || e.target.innerText.length === 0) {
       this.props.data.options[id].title = "Option";
       this.props.editForm(this.props.id, this.props.data);
     }
+  }
+
+  editOptionButton = (id) => {
+    if (this.props.data.name === "check") {
+      this.props.data.options[id].isTrue = !this.props.data.options[id].isTrue;
+    } else if (this.props.data.name === "radio") {
+      if (this.props.data.options[id].isTrue) {
+        this.props.data.options[id].isTrue = false;
+      } else {
+        this.props.data.options.forEach((item, i) => {
+          item.isTrue = false;
+        });
+        this.props.data.options[id].isTrue = true;
+      }
+    }
+    this.props.editForm(this.props.id, this.props.data);
   }
 
   addOption = () => {
@@ -48,11 +64,12 @@ class GeneratingForm extends React.Component {
     this.props.data.options.forEach((item, i) => {
       optionList.push(
         <div key={i}>
-          <div className={type}/>
+          <div onClick={() => this.editOptionButton(i)} className={(item.isTrue) ? `${type}-on` : `${type}-off`}/>
+
           <ContentEditable
             className="option"
             html={item.title}
-            onInput={(e) => this.editOption(e, i)}
+            onChange={(e) => this.editOption(e, i)}
             onBlur={(e) => this.editOptionOnBlur(e, i)}/>
         </div>
       );

@@ -56,7 +56,6 @@
   display: inline-block;
   font-size: 16px;
   cursor: pointer;
-  font-weight: bold;
 }
 
 .opening-screen .developer-description button:hover {

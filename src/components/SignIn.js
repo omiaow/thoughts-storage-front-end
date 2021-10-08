@@ -1,4 +1,5 @@
 import React from "react";
+import {withRouter} from 'react-router-dom';
 
 import "../styles/forms.css";
 
@@ -12,11 +13,11 @@ class SignIn extends React.Component {
           <input type="password" placeholder="Password"/>
           <input type="submit" value="Sign In"/>
           <a className="a-left" href="CreateAccount">Create account</a>
-          <a className="a-right" href="ForgotPassword">Forgot password?</a>
+          <a className="a-right" href="NewPassword">Forgot password?</a>
         </div>
       </div>
     );
   }
 }
 
-export default SignIn;
+export default withRouter(SignIn);

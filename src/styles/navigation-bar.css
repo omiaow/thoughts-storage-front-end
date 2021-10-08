@@ -13,10 +13,10 @@ header h1 {
   cursor: pointer;
 }
 
-header button {
+header a {
   width: 80px;
   float: right;
-  height: 30px;
+  min-height: 20px;
   margin: 15px 5%;
   border: 1px solid white;
   border-radius: 5px;
@@ -26,9 +26,11 @@ header button {
   display: inline-block;
   font-size: 16px;
   cursor: pointer;
+  text-align: center;
+  padding: 5px 0;
 }
 
-header button:hover {
+header a:hover {
   background-color: white;
   color: #06141C;
 }
