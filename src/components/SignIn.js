@@ -12,8 +12,8 @@ class SignIn extends React.Component {
           <input type="email" placeholder="Email"/>
           <input type="password" placeholder="Password"/>
           <input type="submit" value="Sign In"/>
-          <a className="a-left" href="CreateAccount">Create account</a>
-          <a className="a-right" href="NewPassword">Forgot password?</a>
+          <span className="a-left" onClick={() => this.props.history.push({pathname: "CreateAccount"})}>Create account</span>
+          <span className="a-right" onClick={() => this.props.history.push({pathname: "NewPassword"})}>Forgot password?</span>
         </div>
       </div>
     );

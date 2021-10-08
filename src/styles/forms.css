@@ -100,14 +100,20 @@
   background-color: #06141C;
 }
 
-.input-area .a-left {
-  float: left;
+.input-area .a-left, .input-area .a-right {
   color: white;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .input-area .a-right {
   float: right;
-  color: white;
+  margin-right: 20px;
+}
+
+.input-area .a-left {
+  float: left;
+  margin-left: 20px;
 }
 
 .input-area .form-name {
@@ -126,6 +132,7 @@
   display: inline-block;
   border: none;
   outline: none;
+  font-weight: bold;
 }
 
 .input-area .form-name:hover, .input-area .form-name:focus {

@@ -13,7 +13,7 @@ header h1 {
   cursor: pointer;
 }
 
-header a {
+header span {
   width: 80px;
   float: right;
   min-height: 20px;
@@ -30,7 +30,7 @@ header a {
   padding: 5px 0;
 }
 
-header a:hover {
+header span:hover {
   background-color: white;
   color: #06141C;
 }

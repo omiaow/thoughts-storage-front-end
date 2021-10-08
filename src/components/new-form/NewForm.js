@@ -52,7 +52,7 @@ class NewForm extends React.Component {
           {this.renderListOfForms()}
           <AddForm addForm={this.addForm}/>
 
-          <input type="submit" value="Create"/>
+          <input type="submit" value="Ready"/>
         </div>
       </div>
     );

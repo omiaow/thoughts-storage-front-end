@@ -101,6 +101,15 @@ class GeneratingForm extends React.Component {
   render() {
     return (
       <div className="form-card">
+        <div
+          onDragStart={(e) => console.log(e)}
+          onDragLeave={(e) => console.log(e)}
+          onDragEnd={(e) => console.log(e)}
+          onDragOver={(e) => console.log(e)}
+          onDrop={(e) => console.log(e)}
+          draggable={true}
+          className="drager"
+        >...</div>
         <ContentEditable
           className="title"
           html={this.props.data.title}
