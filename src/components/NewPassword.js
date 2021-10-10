@@ -12,6 +12,7 @@ class NewPassword extends React.Component {
           <input type="password" placeholder="New password"/>
           <input type="password" placeholder="Confirm password"/>
           <input type="submit" value="Submit"/>
+          <span className="a-right" onClick={() => this.props.history.push({pathname: "SignIn"})}>Sign in</span>
         </div>
       </div>
     );

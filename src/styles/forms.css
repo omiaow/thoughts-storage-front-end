@@ -18,7 +18,8 @@
 
 .input-area {
   min-height: 300px;
-  margin: 100px auto;
+  float: left;
+  margin-top: 100px;
 }
 
 
@@ -26,6 +27,7 @@
 @media only screen and (min-width: 600px) {
   .input-area{
     width: 35%;
+    margin: 100px 32.5% 0 32.5%;
   }
 }
 
@@ -114,28 +116,4 @@
 .input-area .a-left {
   float: left;
   margin-left: 20px;
-}
-
-.input-area .form-name {
-  text-align: center;
-  resize: horizontal;
-  padding: 5px;
-  width: calc(84% - 10px);
-  min-height: 37px;
-  background-color: #06141C;
-  color: white;
-  margin: 10px 8% 20px 8%;
-  border-radius: 5px;
-  font-size: 30px;
-  line-height: 37px;
-  text-decoration: none;
-  display: inline-block;
-  border: none;
-  outline: none;
-  font-weight: bold;
-}
-
-.input-area .form-name:hover, .input-area .form-name:focus {
-  background-color: white;
-  color: #06141C;
 }

@@ -6,6 +6,7 @@ import CreateAccount from "./components/CreateAccount";
 import SignIn from "./components/SignIn";
 import NewPassword from "./components/NewPassword";
 import Overview from "./components/Overview";
+import Form from "./components/render-form/Form";
 import NewForm from "./components/new-form/NewForm";
 
 import "./styles/app.css";
@@ -22,6 +23,7 @@ function App() {
             <Route exact path="/NewPassword" component={NewPassword}/>
             <Route exact path="/Overview" component={Overview}/>
             <Route exact path="/NewForm" component={NewForm}/>
+            <Route exact path="/Form" component={Form}/>
           </Switch>
       </main>
     </BrowserRouter>

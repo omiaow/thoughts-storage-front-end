@@ -5,7 +5,7 @@ import "../../styles/control-window.css";
 class AddForm extends React.Component {
 
   state = {
-    display: false
+    display: false // for recognizing to display
   }
 
   render() {
@@ -17,8 +17,11 @@ class AddForm extends React.Component {
             <div className="name">Form types</div>
             <div className="list">
 
+              {/* choosing checkbox form card */}
+
               <div className="type" onClick={() => {
                 this.props.addForm({
+                  isImportant: false,
                   name: "check",
                   title: "Question or task",
                   options: [{isTrue: false, title: "Option"}]
@@ -29,8 +32,11 @@ class AddForm extends React.Component {
                 <span>Multiple answers</span>
               </div>
 
+              {/* choosing radiobutton form card */}
+
               <div className="type" onClick={() => {
                 this.props.addForm({
+                  isImportant: false,
                   name: "radio",
                   title: "Question or task",
                   options: [{isTrue: false, title: "Option"}]
@@ -41,8 +47,11 @@ class AddForm extends React.Component {
                 <span>Single answer</span>
               </div>
 
+              {/* choosing date form card */}
+
               <div className="type" onClick={() => {
                 this.props.addForm({
+                  isImportant: false,
                   name: "date",
                   title: "Question or task"
                 });
@@ -52,10 +61,14 @@ class AddForm extends React.Component {
                 <span>Date</span>
               </div>
 
+              {/* choosing text form card */}
+
               <div className="type" onClick={() => {
                 this.props.addForm({
+                  isImportant: false,
                   name: "text",
-                  title: "Question or task"
+                  title: "Question or task",
+                  text: "Answer"
                 });
                 this.setState({display: false});
               }}>
@@ -63,10 +76,14 @@ class AddForm extends React.Component {
                 <span>Text</span>
               </div>
 
+              {/* choosing textarea form card */}
+
               <div className="type" onClick={() => {
                 this.props.addForm({
+                  isImportant: false,
                   name: "paragraph",
-                  title: "Question or task"
+                  title: "Question or task",
+                  text: "Answer"
                 });
                 this.setState({display: false});
               }}>
@@ -74,8 +91,11 @@ class AddForm extends React.Component {
                 <span>Paragraph</span>
               </div>
 
+              {/* choosing file uploading form card */}
+              
               <div className="type" onClick={() => {
                 this.props.addForm({
+                  isImportant: false,
                   name: "upload",
                   title: "Question or task"
                 });

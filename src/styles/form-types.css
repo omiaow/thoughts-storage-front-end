@@ -1,12 +1,44 @@
+.form-name, .form-name-editable {
+  text-align: center;
+  resize: horizontal;
+  padding: 5px;
+  width: calc(84% - 10px);
+  min-height: 37px;
+  background-color: #06141C;
+  color: white;
+  margin: 10px 8% 15px 8%;
+  border-radius: 5px;
+  font-size: 30px;
+  line-height: 37px;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  outline: none;
+  font-weight: bold;
+}
+
+.form-name-editable:hover, .input-area .form-name-editable:focus {
+  background-color: white;
+  color: #06141C;
+}
+
+.drop-place {
+  float: left;
+  width: 84%;
+  margin: 2.5px 8%;
+  height: 10px;
+  border-radius: 5px;
+}
+
 .form-card {
   width: 84%;
-  margin: 10px calc(8% - 1px);
+  margin: 0 calc(8% - 1px);
   border: 1px solid white;
   border-radius: 8px;
   float: left;
 }
 
-.form-card .drager {
+.form-card .dragger {
   width: 100%;
   height: 20px;
   border-radius: 10px;
@@ -15,7 +47,7 @@
   cursor: grab;
 }
 
-.form-card .title {
+.form-card .title, .form-card .title-editable {
   resize: horizontal;
   padding: 5px;
   width: calc(90% - 10px);
@@ -32,7 +64,7 @@
   outline: none;
 }
 
-.form-card .title:hover, .form-card .title:focus {
+.form-card .title-editable:hover, .form-card .title-editable:focus {
   background-color: white;
   color: #06141C;
 }
@@ -85,7 +117,7 @@
   background-size: 100% 100%;
 }
 
-.form-card .option {
+.form-card .option, .form-card .option-editable {
   float: left;
   padding: 5px;
   width: calc(95% - 65px);
@@ -103,20 +135,21 @@
   outline: none;
 }
 
-.form-card .option:hover, .form-card .option:focus {
+.form-card .option-editable:hover, .form-card .option-editable:focus {
   background-color: white;
   color: #06141C;
 }
 
-.form-card .add {
+.form-card .add, .form-card .exclamation-on, .form-card .exclamation-off, .form-card .remove {
   float: left;
-  font-size: 17px;
-  width: 30px;
-  height: 30px;
-  border: none;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
-  margin: 30px 0px 15px 15px;
+  margin: 12.5px 0px 12.5px 15px;
   cursor: pointer;
+}
+
+.form-card .add {
   background: url("images/add-3.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -128,15 +161,31 @@
   background-size: 100% 100%;
 }
 
+.form-card .exclamation-on {
+  background: url("images/exclamation-2.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.form-card .exclamation-on:hover {
+  background: url("images/exclamation-1.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.form-card .exclamation-off {
+  background: url("images/exclamation-1.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.form-card .exclamation-off:hover {
+  background: url("images/exclamation-2.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
 .form-card .remove {
-  float: left;
-  font-size: 17px;
-  width: 30px;
-  height: 30px;
-  border: none;
-  border-radius: 50%;
-  margin: 30px 0px 15px 15px;
-  cursor: pointer;
   background: url("images/remove-1.png");
   background-repeat: no-repeat;
   background-size: 80% 80%;
@@ -151,31 +200,49 @@
   background-color: white;
 }
 
-.form-card .text {
+.form-card .top {
+  width: 100%;
+  height: 20px;
+  border-radius: 10px;
+}
+
+.form-card .bottom {
+  float: left;
+  width: 100%;
+  height: 30px;
+  margin: 10px 0px;
+}
+
+.form-card .text, .form-card .paragraph {
   padding: 5px 10px;
-  width: calc(90% - 20px); /* subtract padding */
-  height: 25px;
+  border: 2px solid white;
+  width: calc(90% - 24px); /* subtract padding and border */
+  min-height: 25px;
   border-radius: 6px;
   margin: 15px 5% 5px 5%;
   background-color: white;
-  color: grey;
+  color: #06141C;
   font-size: 20px;
   cursor: text;
+  display: inline-block;
+  border: none;
+  outline: none;
+}
+
+.form-card .text {
+  min-height: 25px;
 }
 
 .form-card .paragraph {
-  padding: 5px 10px;
-  width: calc(90% - 20px); /* subtract padding */
-  height: 100px;
-  border-radius: 6px;
-  margin: 15px 5% 5px 5%;
-  background-color: white;
-  color: grey;
-  font-size: 20px;
-  cursor: text;
+  min-height: 100px;
+}
+
+.form-card .text:hover, .form-card .paragraph:hover {
+  background-color: lightgrey;
 }
 
 .form-card .date, .form-card .upload {
+  float: left;
   text-align: center;
   padding: 5px 10px;
   width: calc(90% - 20px); /* subtract padding */
@@ -187,4 +254,8 @@
   font-size: 20px;
   cursor: pointer;
   text-transform: capitalize;
+}
+
+.form-card .date:hover, .form-card .upload:hover {
+  background-color: lightgrey;
 }

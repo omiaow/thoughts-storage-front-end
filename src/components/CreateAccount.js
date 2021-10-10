@@ -13,7 +13,7 @@ class CreateAccount extends React.Component {
           <input type="password" placeholder="Password"/>
           <input type="password" placeholder="Confirm password"/>
           <input type="submit" value="Create"/>
-          <span className="a-left" onClick={() => this.props.history.push({pathname: "SignIn"})}>Sign in</span>
+          <span className="a-right" onClick={() => this.props.history.push({pathname: "SignIn"})}>Sign in</span>
         </div>
       </div>
     );
