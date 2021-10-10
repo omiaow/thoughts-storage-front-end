@@ -92,12 +92,15 @@ class NewForm extends React.Component {
             className="form-name-editable"
             html={this.state.form.name}
             onChange={(e) => {
-              this.state.form.name = e.target.value;
-              this.setState({form: this.state.form});
+              let newForm = {...this.state.form};
+              newForm.name = e.target.value;
+              this.setState({form: newForm});
             }}
             onBlur={(e) => {
               if (e.target.innerText === "\n" || e.target.innerText.length === 0) {
-                this.setState({name: "Name of form"});
+                let newForm = {...this.state.form};
+                newForm.name = "Name of form";
+                this.setState({form: newForm});
               }
             }}/>
 
