@@ -140,6 +140,7 @@
   color: #06141C;
 }
 
+/* Bottom Button part */
 .form-card .add, .form-card .exclamation-on, .form-card .exclamation-off, .form-card .remove {
   float: left;
   width: 25px;
@@ -155,32 +156,14 @@
   background-size: 100% 100%;
 }
 
-.form-card .add:hover {
-  background: url("images/add-1.png");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-
 .form-card .exclamation-on {
   background: url("images/exclamation-2.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
 
-.form-card .exclamation-on:hover {
-  background: url("images/exclamation-1.png");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-
 .form-card .exclamation-off {
   background: url("images/exclamation-1.png");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-
-.form-card .exclamation-off:hover {
-  background: url("images/exclamation-2.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
@@ -192,13 +175,35 @@
   background-position: center;
 }
 
-.form-card .remove:hover {
-  background: url("images/remove-2.png");
-  background-repeat: no-repeat;
-  background-size: 80% 80%;
-  background-position: center;
-  background-color: white;
+/* Desktop devices on hover */
+@media only screen and (min-width: 600px) {
+  .form-card .add:hover {
+    background: url("images/add-1.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .form-card .exclamation-on:hover {
+    background: url("images/exclamation-1.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .form-card .exclamation-off:hover {
+    background: url("images/exclamation-2.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .form-card .remove:hover {
+    background: url("images/remove-2.png");
+    background-repeat: no-repeat;
+    background-size: 80% 80%;
+    background-position: center;
+    background-color: white;
+  }
 }
+/* ------------- */
 
 .form-card .top {
   width: 100%;

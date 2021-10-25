@@ -16,23 +16,39 @@
   user-select: none;
 }
 
+.error {
+  float: left;
+  color: white;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+
 .input-area {
   min-height: 300px;
   float: left;
-  margin-top: 100px;
 }
 
 
 /* Desktop devices */
 @media only screen and (min-width: 600px) {
-  .input-area{
+  .error {
     width: 35%;
-    margin: 100px 32.5% 0 32.5%;
+    margin: 60px 32.5% 0 32.5%;
+  }
+
+  .input-area {
+    width: 35%;
+    margin: 0 32.5% 0 32.5%;
   }
 }
 
 /* Other devices */
 @media only screen and (max-width: 600px) {
+  .error{
+    width: 100%;
+  }
+
   .input-area{
     width: 100%;
   }

@@ -67,8 +67,7 @@ class AddForm extends React.Component {
                 this.props.addForm({
                   isImportant: false,
                   name: "text",
-                  title: "Question or task",
-                  text: "Answer"
+                  title: "Question or task"
                 });
                 this.setState({display: false});
               }}>
@@ -82,8 +81,7 @@ class AddForm extends React.Component {
                 this.props.addForm({
                   isImportant: false,
                   name: "paragraph",
-                  title: "Question or task",
-                  text: "Answer"
+                  title: "Question or task"
                 });
                 this.setState({display: false});
               }}>
@@ -92,7 +90,7 @@ class AddForm extends React.Component {
               </div>
 
               {/* choosing file uploading form card */}
-              
+              {/*
               <div className="type" onClick={() => {
                 this.props.addForm({
                   isImportant: false,
@@ -104,7 +102,7 @@ class AddForm extends React.Component {
                 <div className="upload"/>
                 <span>Upload file</span>
               </div>
-
+              */}
             </div>
           </div>
         </div>

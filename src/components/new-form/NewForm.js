@@ -4,6 +4,9 @@ import ContentEditable from "react-contenteditable";
 import GeneratingForm from "./GeneratingForm";
 import AddForm from "./AddForm";
 
+import AuthContext from '../../context/AuthContext';
+import useHttp from "../../hooks/http.hook";
+
 import "../../styles/forms.css";
 import "../../styles/form-types.css";
 
@@ -83,32 +86,44 @@ class NewForm extends React.Component {
     return forms;
   }
 
+  // rendering editable name of form
+  renderNameOfForm = () => {
+    return (
+      <ContentEditable
+        className="form-name-editable"
+        html={this.state.form.name}
+        tabIndex="1"
+        onChange={(e) => {
+          let newForm = {...this.state.form};
+          newForm.name = e.target.value.replace( /(<([^>]+)>)/ig, '');
+          this.setState({form: newForm});
+        }}
+        onBlur={(e) => {
+          if (e.target.innerText === "\n" || e.target.innerText.length === 0) {
+            let newForm = {...this.state.form};
+            newForm.name = "Name of form";
+            this.setState({form: newForm});
+          }
+        }}
+        onFocus={(e) => {
+          if (this.state.form.name === "Name of form") {
+            let newForm = {...this.state.form};
+            newForm.name = "";
+            this.setState({form: newForm});
+          }
+        }}
+        />
+    );
+  }
+
   render() {
     return (
       <div className="new-form">
         <div className="input-area">
-
-          <ContentEditable
-            className="form-name-editable"
-            html={this.state.form.name}
-            onChange={(e) => {
-              let newForm = {...this.state.form};
-              newForm.name = e.target.value;
-              this.setState({form: newForm});
-            }}
-            onBlur={(e) => {
-              if (e.target.innerText === "\n" || e.target.innerText.length === 0) {
-                let newForm = {...this.state.form};
-                newForm.name = "Name of form";
-                this.setState({form: newForm});
-              }
-            }}/>
-
+          {this.renderNameOfForm()}
           {this.renderListOfForms()}
-
           <AddForm addForm={this.addForm}/>
-
-          <input type="submit" value="Ready"/>
+          <Create form={this.state.form} history={this.props.history}/>
         </div>
       </div>
     );
@@ -116,3 +131,18 @@ class NewForm extends React.Component {
 }
 
 export default NewForm;
+
+// Button to create new form
+const Create = (props) => {
+  const auth = React.useContext(AuthContext);
+  const { request } = useHttp();
+
+  const create = async () => {
+    const response = await request("/form/create", "POST", props.form, {
+      authorization: `Bearer ${auth.token}`
+    });
+    if (response) props.history.push({ pathname: "Overview" });
+  }
+
+  return <input type="submit" value="Create" onClick={() => create()}/>;
+}

@@ -7,7 +7,8 @@ class Calendar extends React.Component {
   state = {
     display: false,
     title: "Choose date",
-    date: new Date()
+    date: new Date(),
+    renderDays: true
   }
 
   // rendering next month
@@ -28,8 +29,9 @@ class Calendar extends React.Component {
   chooseDate = (date) => {
     const shortMonthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
     let newDate = new Date(date);
-    this.props.editDate(date);
-    this.setState({title: `${newDate.getDate()} - ${shortMonthNames[newDate.getMonth()]}, ${newDate.getFullYear()}`, display: false});
+    newDate.setDate(newDate.getDate() + 1);
+    this.props.editDate(`${newDate.toISOString().slice(0, 10)}`);
+    this.setState({title: `${date.getDate()} - ${shortMonthNames[date.getMonth()]}, ${date.getFullYear()}`, display: false});
   }
 
   // rendering days by week types
@@ -45,23 +47,48 @@ class Calendar extends React.Component {
     }
 
     for (let i=0; i<getWeekDay(firstDay); i++) {
-      days.push(<div className="past" key={`${i}-empty`}/>);
+      days.push(<div className="empty" key={`${i}-empty`}/>);
     }
 
     let today = new Date();
     while (firstDay.getTime() <= lastDay.getTime()) {
       let newDate = new Date(firstDay);
       if (newDate.getDate() === today.getDate() && newDate.getMonth() === today.getMonth() && newDate.getFullYear() === today.getFullYear()) {
-        days.push(<div className="today" key={newDate.getDate()}>{newDate.getDate()}</div>);
-      } else if (newDate.getTime() < today.getTime()) {
-        days.push(<div className="past" key={newDate.getDate()}>{newDate.getDate()}</div>);
-      } else if (newDate.getTime() > today.getTime()) {
-        days.push(<div className="future" key={newDate.getDate()} onClick={() => this.chooseDate(newDate.toISOString().slice(0, 10))}>{newDate.getDate()}</div>);
+        days.push(<div className="today" key={newDate.getDate()} onClick={() => this.chooseDate(newDate)}>{newDate.getDate()}</div>);
+      } else {
+        days.push(<div className="days" key={newDate.getDate()} onClick={() => this.chooseDate(newDate)}>{newDate.getDate()}</div>);
       }
       firstDay.setDate(firstDay.getDate() + 1);
     }
 
-    return days;
+    return (
+      <>
+        <div className="week-names">
+          <div className="weekday">Mo</div>
+          <div className="weekday">Tu</div>
+          <div className="weekday">We</div>
+          <div className="weekday">Th</div>
+          <div className="weekday">Fr</div>
+          <div className="weekend">Sa</div>
+          <div className="weekend">Su</div>
+        </div>
+        <div className="date-numbers">{days}</div>
+      </>
+    );
+  }
+
+  renderYears = () => {
+    let today = new Date();
+    let newDate = new Date(`${today.getFullYear()-100}-${today.getMonth()}-${today.getDate()}`);
+    newDate.setMonth(newDate.getMonth() + 1);
+    let years = [];
+    for (let i=0; i<200; i++) {
+      let tempDate = new Date(newDate);
+      years.push(<div key={i} className="years" onClick={() => this.setState({date: tempDate, renderDays: true})}>{tempDate.getFullYear()}</div>);
+      newDate.setYear(newDate.getFullYear() + 1);
+    }
+
+    return <div className="year-numbers">{years}</div>;
   }
 
   render() {
@@ -76,21 +103,10 @@ class Calendar extends React.Component {
             <div className="calendar">
               <div className="calendar-header">
                 <div className="left-button" onClick={() => this.moveLeft()}/>
-                <div className="month-name">{`${monthNames[this.state.date.getMonth()]} ${this.state.date.getFullYear()}`}</div>
+                <div className="month-name" onClick={() => this.setState({renderDays: !this.state.renderDays})}>{`${monthNames[this.state.date.getMonth()]} ${this.state.date.getFullYear()}`}</div>
                 <div className="right-button" onClick={() => this.moveRight()}/>
               </div>
-              <div className="week-names">
-                <div className="weekday">Mo</div>
-                <div className="weekday">Tu</div>
-                <div className="weekday">We</div>
-                <div className="weekday">Th</div>
-                <div className="weekday">Fr</div>
-                <div className="weekend">Sa</div>
-                <div className="weekend">Su</div>
-              </div>
-              <div className="date-numbers">
-                {this.renderDays(this.state.date)}
-              </div>
+              {(this.state.renderDays) ? this.renderDays(this.state.date) : this.renderYears(this.state.date)}
             </div>
           </div>
         </div>

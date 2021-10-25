@@ -1,32 +1,30 @@
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
+import useRoutes from "./routes";
+import useAuth from "./hooks/auth.hook";
+import AuthContext from "./context/AuthContext";
 
 import NavigationBar from "./components/NavigationBar";
-import OpeningPage from "./components/OpeningPage";
-import CreateAccount from "./components/CreateAccount";
-import SignIn from "./components/SignIn";
-import NewPassword from "./components/NewPassword";
-import Overview from "./components/Overview";
-import Form from "./components/render-form/Form";
-import NewForm from "./components/new-form/NewForm";
+import Loader from "./components/tools/Loader";
 
 import "./styles/app.css";
 
 function App() {
+
+  const { token, userId, login, logout, ready } = useAuth();
+  const isAuthenticated = !!token;
+  const routes = useRoutes(isAuthenticated);
+
+  if (!ready) {
+    return <Loader/>
+  }
+
   return (
-    <BrowserRouter>
-      <NavigationBar/>
-      <main>
-          <Switch>
-            <Route exact path="/" component={OpeningPage}/>
-            <Route exact path="/CreateAccount" component={CreateAccount}/>
-            <Route exact path="/SignIn" component={SignIn}/>
-            <Route exact path="/NewPassword" component={NewPassword}/>
-            <Route exact path="/Overview" component={Overview}/>
-            <Route exact path="/NewForm" component={NewForm}/>
-            <Route exact path="/Form" component={Form}/>
-          </Switch>
-      </main>
-    </BrowserRouter>
+    <AuthContext.Provider value={{ token, userId, login, logout, isAuthenticated }}>
+      <BrowserRouter>
+        <NavigationBar/>
+        <main>{ routes }</main>
+      </BrowserRouter>
+    </AuthContext.Provider>
   );
 }
 

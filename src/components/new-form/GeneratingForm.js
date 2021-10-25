@@ -5,7 +5,7 @@ class GeneratingForm extends React.Component {
 
   // setting form question or task title
   editTitle = (e) => {
-    this.props.data.title = e.target.value;
+    this.props.data.title = e.target.value.replace( /(<([^>]+)>)/ig, '');
     this.props.editForm(this.props.id, this.props.data);
   }
 
@@ -28,6 +28,10 @@ class GeneratingForm extends React.Component {
       this.props.data.title = this.props.data.title.slice(0, this.props.data.title.length-1);
     }
 
+    if (this.props.data.title === "Question or task") {
+      this.props.data.title = "";
+    }
+
     this.props.editForm(this.props.id, this.props.data);
   }
 
@@ -45,7 +49,7 @@ class GeneratingForm extends React.Component {
 
   // setting option text title
   editOption = (e, id) => {
-    this.props.data.options[id].title = e.target.value;
+    this.props.data.options[id].title = e.target.value.replace( /(<([^>]+)>)/ig, '');
     this.props.editForm(this.props.id, this.props.data);
   }
 
@@ -53,6 +57,14 @@ class GeneratingForm extends React.Component {
   editOptionOnBlur = (e, id) => {
     if (e.target.innerText === "\n" || e.target.innerText.length === 0) {
       this.props.data.options[id].title = "Option";
+      this.props.editForm(this.props.id, this.props.data);
+    }
+  }
+
+  // edit empty on focus
+  editOptionOnFocus = (e, id) => {
+    if (e.target.innerText === "Option") {
+      this.props.data.options[id].title = "";
       this.props.editForm(this.props.id, this.props.data);
     }
   }
@@ -104,7 +116,8 @@ class GeneratingForm extends React.Component {
             className="option-editable"
             html={item.title}
             onChange={(e) => this.editOption(e, i)}
-            onBlur={(e) => this.editOptionOnBlur(e, i)}/>
+            onBlur={(e) => this.editOptionOnBlur(e, i)}
+            onFocus={(e) => this.editOptionOnFocus(e, i)}/>
         </div>
       );
     });

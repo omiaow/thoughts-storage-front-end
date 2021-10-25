@@ -1,0 +1,153 @@
+.details {
+  float: left;
+  width: 100%;
+  min-height: calc(100vh - 60px); /* subtract navigation bar */
+  background-color: #06141C;
+}
+
+.details h1 {
+  width: 84%;
+  margin: 5px 8% 20px 8%;
+  color: white;
+  font-size: 30px;
+  font-family: 'Signika', sans-serif;
+  text-align: center;
+}
+
+.details h2 {
+  width: 84%;
+  margin: 50px 8% 5px 8%;
+  color: white;
+  font-size: 20px;
+  font-family: 'Signika', sans-serif;
+  text-align: center;
+}
+
+.details .control-bar {
+  float: left;
+  width: 90%;
+  min-height: 30px;
+  margin: 5px 5%;
+  padding: 5px 0;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.details .control-bar .button-on {
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px 5px;
+  padding: 5px;
+  color: #06141C;
+  background-color: white;
+}
+
+.details .control-bar .button-off {
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px 5px;
+  padding: 5px;
+  color: white;
+}
+
+.details .control-bar .button-off:hover {
+  background-color: white;
+  color: #06141C;
+}
+
+.details .form, .details code {
+  float: left;
+  min-height: 30px;
+  padding-bottom: 30px;
+}
+
+.details code {
+  background-color: #303438;
+  color: white;
+  padding: 5px;
+}
+
+/* Desktop devices */
+@media only screen and (min-width: 600px) {
+  .details .form, .details code {
+    width: 35%;
+    margin: 0 32.5% 0 32.5%;
+  }
+}
+
+/* Other devices */
+@media only screen and (max-width: 600px) {
+  .details .form, .details code {
+    width: 90%;
+    margin: 0 5%;
+  }
+}
+
+.details .form .question {
+  float: left;
+  border: 1px solid white;
+  width: calc(100% - 2px); /* borders */
+  min-height: 30px;
+  margin-top: 20px;
+  padding: 5px 0;
+  border-radius: 5px;
+}
+
+.details .form .question .title {
+  margin: 5px 15px 15px 15px;
+  color: white;
+  font-size: 20px;
+}
+
+.details .form .question .info {
+  margin: 15px 15px 5px 15px;
+  color: white;
+  font-size: 15px;
+}
+
+.details .form .question .answer {
+  margin: 5px 15px;
+  padding: 5px;
+  width: calc(100% - 40px); /* margins and paddings */
+  color: #06141C;
+  background-color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.details .form .question .answer:hover {
+  background-color: lightgrey;
+}
+
+.details .form .question .option-diagram {
+  margin: 5px 25px 5px 15px;
+  border-left: 1px solid white;
+  width: calc(100% - 41px); /* margins and paddings */
+}
+
+.details .form .question .option-diagram .option {
+  padding: 5px;
+  width: 100%; /* margins and paddings */
+  color: #06141C;
+  background-color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.details .form .question .option-diagram .option-info {
+  margin: 15px 15px 5px 0;
+  color: white;
+  font-size: 15px;
+}

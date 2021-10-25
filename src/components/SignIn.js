@@ -1,23 +1,46 @@
 import React from "react";
-import {withRouter} from 'react-router-dom';
+
+import Error from "./tools/Error";
+
+import AuthContext from "../context/AuthContext";
+import useHttp from "../hooks/http.hook";
 
 import "../styles/forms.css";
 
-class SignIn extends React.Component {
-  render() {
-    return (
-      <div className="forms">
-        <div className="input-area">
-          <h2>Sign in!</h2>
-          <input type="email" placeholder="Email"/>
-          <input type="password" placeholder="Password"/>
-          <input type="submit" value="Sign In"/>
-          <span className="a-left" onClick={() => this.props.history.push({pathname: "CreateAccount"})}>Create account</span>
-          <span className="a-right" onClick={() => this.props.history.push({pathname: "NewPassword"})}>Forgot password?</span>
-        </div>
-      </div>
-    );
+const SignIn = (props) => {
+
+  const auth = React.useContext(AuthContext);
+  const { error, request, clearError } = useHttp();
+
+  const [userData, setUserData] = React.useState({
+    email: "",
+    password: ""
+  });
+
+
+  const signIn = async (e) => {
+    e.preventDefault();
+    try {
+      const data = await request("/auth/login", "POST", userData);
+      auth.login(data.token, data.userId);
+    } catch (err) {} // ignore
   }
+
+  return (
+    <div className="forms">
+      {Error(error, clearError)}
+      <div className="input-area">
+        <h2>Sign in!</h2>
+        <form autoComplete="off">
+          <input type="email" onChange={(e) => setUserData({...userData,  email: e.target.value })} placeholder="Email"/>
+          <input type="password" onChange={(e) => setUserData({...userData, password: e.target.value })} placeholder="Password"/>
+          <input type="submit" value="Sign In" onClick={(e) => signIn(e)}/>
+        </form>
+        <span className="a-left" onClick={() => props.history.push({pathname: "CreateAccount"})}>Create account</span>
+        {/*<span className="a-right" onClick={() => props.history.push({pathname: "NewPassword"})}>Forgot password?</span>*/}
+      </div>
+    </div>
+  );
 }
 
-export default withRouter(SignIn);
+export default SignIn;
