@@ -41,7 +41,7 @@
 .opening-screen button {
   width: 150px;
   height: 50px;
-  margin: 40px auto 0 auto;
+  margin: 40px auto 40px auto;
   border: 1px solid white;
   border-radius: 8px;
   background-color: #1f2933;
