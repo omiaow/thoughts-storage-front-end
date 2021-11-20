@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  <a href="https://github.com/omiaow/thoughts-storage/blob/main/LICENSE" target="blank">
+  <a href="https://github.com/omiaow/thoughts-storage-front-end/blob/main/LICENSE" target="blank">
     <img src="https://img.shields.io/github/license/omiaow/thoughts-storage-front-end?style=flat-square" alt="thoughts-storage" />
   </a>
 </p>
