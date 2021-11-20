@@ -1,5 +1,6 @@
 import React from "react";
 
+import Loader from "./tools/Loader";
 import Error from "./tools/Error";
 
 import AuthContext from "../context/AuthContext";
@@ -10,7 +11,7 @@ import "../styles/forms.css";
 const SignIn = (props) => {
 
   const auth = React.useContext(AuthContext);
-  const { error, request, clearError } = useHttp();
+  const { request, error, clearError, loading } = useHttp();
 
   const [userData, setUserData] = React.useState({
     email: "",
@@ -26,6 +27,10 @@ const SignIn = (props) => {
     } catch (err) {} // ignore
   }
 
+  if (loading) {
+    return <Loader/>;
+  }
+
   return (
     <div className="forms">
       {Error(error, clearError)}
@@ -37,7 +42,7 @@ const SignIn = (props) => {
           <input type="submit" value="Sign In" onClick={(e) => signIn(e)}/>
         </form>
         <span className="a-left" onClick={() => props.history.push({pathname: "CreateAccount"})}>Create account</span>
-        {/*<span className="a-right" onClick={() => props.history.push({pathname: "NewPassword"})}>Forgot password?</span>*/}
+        <span className="a-right" onClick={() => props.history.push({pathname: "NewPassword"})}>Forgot password?</span>
       </div>
     </div>
   );

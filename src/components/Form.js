@@ -68,7 +68,7 @@ const Form = (props) => {
   const renderContentEditableType = (item, id) => {
     return <ContentEditable className={item.name} html={item.text} onChange={(e) => {
       let newForm = {...form};
-      newForm.listOfForms[id].text = e.target.value;
+      newForm.listOfForms[id].text = e.target.value.replace( /(<([^>]+)>)/ig, '');
       setForm(newForm);
     }}/>;
   }

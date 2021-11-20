@@ -29,7 +29,7 @@ class AddForm extends React.Component {
                 this.setState({display: false});
               }}>
                 <div className="check"/>
-                <span>Multiple answers</span>
+                <span>Checkbox</span>
               </div>
 
               {/* choosing radiobutton form card */}
@@ -44,7 +44,7 @@ class AddForm extends React.Component {
                 this.setState({display: false});
               }}>
                 <div className="radio"/>
-                <span>Single answer</span>
+                <span>Radio button</span>
               </div>
 
               {/* choosing date form card */}

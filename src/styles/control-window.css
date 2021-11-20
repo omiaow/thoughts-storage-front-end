@@ -35,7 +35,7 @@
   width: 70%;
   height: 40px;
   float: left;
-  color: #06141C;
+  color: #1f2933;
   font-size: 30px;
   font-weight: bold;
 }
@@ -53,13 +53,14 @@
   background: url("images/add-1.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
-	background-color: #06141C;
+	background-color: white;
 }
 
  .control-window .exit:hover {
    background: url("images/add-2.png");
    background-repeat: no-repeat;
    background-size: 100% 100%;
+ 	 background-color: #1f2933;
 }
 
 /* Part - Add new form */
@@ -73,9 +74,9 @@
  .control-window .list .type {
   float: left;
   width: 100px;
-  min-height: 150px;
+  min-height: 130px;
   cursor: pointer;
-  margin: 10px 10px;
+  margin: 5px 10px;
   border-radius: 8px;
   text-align: center;
 }
@@ -127,7 +128,7 @@
 }
 
  .control-window .list .type span {
-  color: #06141C;
+  color: #1f2933;
   font-size: 14px;
   padding: 5px auto;
 }
@@ -169,7 +170,7 @@
   float: left;
   width: 60%;
   height: 30px;
-	color: #06141C;
+	color: #1f2933;
 	text-align: center;
 	vertical-align: middle;
 	line-height: 30px;
@@ -231,7 +232,7 @@
 }
 
 .calendar .date-numbers .days {
-	color: #06141C;
+	color: #1f2933;
 }
 
 .calendar .year-numbers {

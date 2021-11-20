@@ -44,7 +44,6 @@ const SignIn = (props) => {
 
   return (
     <div className="overview">
-      {/*
       <h2>Templates</h2>
       <div className="view">
         <span className="template">Website Feedback</span>
@@ -54,11 +53,10 @@ const SignIn = (props) => {
         <span className="template">Account Signup</span>
         <span className="template">Sales Contact</span>
       </div>
-      */}
       <h2>Overview</h2>
       <div className="view">
         {renderForms()}
-        <span className="card" onClick={() => props.history.push({pathname: "/NewForm"})}>New Form</span>
+        <span className="card" onClick={() => props.history.push({pathname: "/NewForm"})}>New form</span>
       </div>
     </div>
   );

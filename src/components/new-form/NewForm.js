@@ -4,6 +4,8 @@ import ContentEditable from "react-contenteditable";
 import GeneratingForm from "./GeneratingForm";
 import AddForm from "./AddForm";
 
+import Error from "../tools/Error";
+
 import AuthContext from '../../context/AuthContext';
 import useHttp from "../../hooks/http.hook";
 
@@ -51,7 +53,7 @@ class NewForm extends React.Component {
         key={`drop ${key}`}
         onDrop={(e) => this.changeOrder(e, key)}
         onDragOver={(e) => this.onDragOver(e)}
-        onDragLeave={(e) => e.target.style.backgroundColor = "#06141C"}
+        onDragLeave={(e) => e.target.style.backgroundColor = "#1f2933"}
         className="drop-place"/>
     );
   }
@@ -59,14 +61,19 @@ class NewForm extends React.Component {
   // changing order after drag and drop
   changeOrder = (e, id) => {
     e.preventDefault();
-    if (this.state.draggedCard !== undefined && !(this.state.draggedCard === 0 && id === 1)) {
-      let formCard = {...this.state.form.listOfForms[this.state.draggedCard]};
+    const draggedCard = this.state.draggedCard;
+    if (draggedCard !== undefined && draggedCard !== id - 1 && draggedCard !== id) {
+      let formCard = {...this.state.form.listOfForms[draggedCard]};
       let newForm = {...this.state.form};
-      newForm.listOfForms.splice(this.state.draggedCard, 1);
-      newForm.listOfForms.splice(id, 0, formCard);
-      this.setState({form: newForm});
+      newForm.listOfForms.splice(draggedCard, 1);
+      if (draggedCard > id) {
+        newForm.listOfForms.splice(id, 0, formCard);
+      } else {
+        newForm.listOfForms.splice(id-1, 0, formCard);
+      }
+      this.setState({form: newForm, draggedCard: undefined});
     }
-    e.target.style.backgroundColor = "#06141C";
+    e.target.style.backgroundColor = "#1f2933";
   }
 
   // changing color when dragged card over dropping place
@@ -123,7 +130,7 @@ class NewForm extends React.Component {
           {this.renderNameOfForm()}
           {this.renderListOfForms()}
           <AddForm addForm={this.addForm}/>
-          <Create form={this.state.form} history={this.props.history}/>
+          <Create form={this.state.form} history={this.props.history} setError={this.setError}/>
         </div>
       </div>
     );
@@ -135,7 +142,7 @@ export default NewForm;
 // Button to create new form
 const Create = (props) => {
   const auth = React.useContext(AuthContext);
-  const { request } = useHttp();
+  const { request, error, clearError } = useHttp();
 
   const create = async () => {
     const response = await request("/form/create", "POST", props.form, {
@@ -144,5 +151,10 @@ const Create = (props) => {
     if (response) props.history.push({ pathname: "Overview" });
   }
 
-  return <input type="submit" value="Create" onClick={() => create()}/>;
+  return (
+    <>
+      {Error(error, clearError)}
+      <input type="submit" value="Create" onClick={() => create()}/>
+    </>
+  );
 }

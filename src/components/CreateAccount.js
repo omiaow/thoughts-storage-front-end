@@ -35,6 +35,7 @@ const CreateAccount = (props) => {
           <input type="password" onChange={(e) => setUserData({...userData, confirmPassword: e.target.value })} placeholder="Confirm password"/>
           <input type="submit" value="Create" onClick={(e) => create(e)}/>
         </form>
+        <span className="a-left" onClick={() => props.history.push({pathname: "NewPassword"})}>Forgot password?</span>
         <span className="a-right" onClick={() => props.history.push({pathname: "SignIn"})}>Sign in</span>
       </div>
     </div>

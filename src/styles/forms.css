@@ -2,14 +2,14 @@
   float: left;
   width: 100%;
   min-height: calc(100vh - 60px); /* subtract navigation bar */
-  background-color: #06141C;
+  background-color: #1f2933;
 }
 
 .new-form {
   float: left;
   width: 100%;
   min-height: calc(100vh - 60px); /* subtract navigation bar */
-  background-color: #06141C;
+  background-color: #1f2933;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -19,9 +19,9 @@
 .error {
   float: left;
   color: white;
-  height: 40px;
+  min-height: 25px;
   text-align: center;
-  line-height: 40px;
+  line-height: 25px;
 }
 
 .input-area {
@@ -32,24 +32,15 @@
 
 /* Desktop devices */
 @media only screen and (min-width: 600px) {
-  .error {
+  .error, .input-area {
     width: 35%;
-    margin: 60px 32.5% 0 32.5%;
-  }
-
-  .input-area {
-    width: 35%;
-    margin: 0 32.5% 0 32.5%;
+    margin: 0 32.5%;
   }
 }
 
 /* Other devices */
 @media only screen and (max-width: 600px) {
-  .error{
-    width: 100%;
-  }
-
-  .input-area{
+  .error, .input-area {
     width: 100%;
   }
 }
@@ -82,7 +73,7 @@
   border-radius: 8px;
   margin: 10px 25%;
   margin-bottom: 30px;
-  background-color: #06141C;
+  background-color: #1f2933;
   color: white;
   text-decoration: none;
   display: inline-block;
@@ -92,7 +83,7 @@
 
 .input-area input[type=submit]:hover {
   background-color: white;
-  color: #06141C;
+  color: #1f2933;
 }
 
 .input-area .add-form {
@@ -102,20 +93,21 @@
   border: 1px solid white;
   border-radius: 50%;
   margin: 0 calc(50% - 19px);
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
   background: url("images/add-2.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  background-color: #1f2933;
 }
 
 .input-area .add-form:hover {
   background: url("images/add-1.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  background-color: #06141C;
+  background-color: white;
 }
 
 .input-area .a-left, .input-area .a-right {

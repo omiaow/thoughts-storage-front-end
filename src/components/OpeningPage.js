@@ -8,13 +8,8 @@ const NavigationBar = (props) => {
   return (
     <div className="opening-screen">
       <div className="developer-description">
-        <h1>Developers</h1>
-        <p>Create questionnaire and receive GET and POST requests of your survey.</p>
-        <button onClick={() => props.history.push({pathname: (isAuthenticated) ? "/NewForm" : "/SignIn"})}>Get Started</button>
-      </div>
-      <div className="developer-description">
-        <h1>Users</h1>
-        <p>Create feedback, survey, questionnaire and see the table and statistics of your survey.</p>
+        <h1>Developers and Guests!</h1>
+        <p>Create feedback, survey, questionnaire and see the response and statistics of your survey. And if you are a developer, receive POST API request of your survey.</p>
         <button onClick={() => props.history.push({pathname: (isAuthenticated) ? "/NewForm" : "/SignIn"})}>Get Started</button>
       </div>
     </div>

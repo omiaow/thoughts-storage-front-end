@@ -94,7 +94,7 @@ const Details = (props) => {
   const renderPage = () => {
     if (pages === "Responses") return <Answers responseList={responseList} total={total} setResponseId={setResponseId} setPage={setPage}/>;
     else if (pages === "EachAnswer") return <EachAnswer responseFormList={responseFormList} responseId={responseId} setResponseId={setResponseId}/>;
-    else if (pages === "API") return <Api/>;
+    else if (pages === "API") return <Api id={id}/>;
   }
 
   return (

@@ -49,7 +49,7 @@ const EachAnswer = (props) => {
 
   return (
     <>
-      <h2>Response: {props.responseId+1}/{props.responseFormList.length}</h2>
+      <h2>Response: {(props.responseFormList.length === 0) ? 0 : props.responseId+1}/{props.responseFormList.length}</h2>
       <div className="control-bar">
         <span className="button-off" onClick={() => {if (props.responseId > 0) props.setResponseId(props.responseId-1)}}>prev</span>
         <span className="button-off" onClick={() => {if (props.responseId < props.responseFormList.length-1) props.setResponseId(props.responseId+1)}}>next</span>

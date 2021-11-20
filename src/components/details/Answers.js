@@ -23,7 +23,7 @@ const Answers = (props) => {
         jsxResponseList.push(
           <div className="question" key={i}>
             <p className="title">{item.title}</p>
-            {jsxAnswerList}
+            <div className="text-list">{jsxAnswerList}</div>
             <p className="info">Answered: {jsxAnswerList.length}</p>
           </div>
         );
