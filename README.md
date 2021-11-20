@@ -26,9 +26,9 @@ Try [Thoughts-Storage](https://thoughts-storage.netlify.app/) for free.
 
 - 🕒 **Fast** - Generate any type of form for the short period.
 
-- ✨ **Clear** - Track the form responses one by one or see statistics of answers.
+- ✨ **Clear** - Track the form responses one by one or see statistics of them.
 
-- 👀 **Multipurpose** - Get JSON and POST request of your form and connect it to web, desktop, android or ios application.
+- 👀 **Multipurpose** - Get JSON and POST request of your form and connect it to the web, desktop, android or ios application.
 
 ## Repositories
 
