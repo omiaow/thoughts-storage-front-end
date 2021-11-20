@@ -8,7 +8,7 @@
   </a>
 </p>
 
-#### Are you a developer and you want to make a form to your app? Don't waste your time to build back-end only for your form! Go to website and follow the steps:
+#### Are you a developer and you want to make a form to your app? Don't waste your time to build back-end only for your form! Go to the [website](https://thoughts-storage.netlify.app/) and follow the steps:
 
 - Create account or sign in.
 
@@ -24,11 +24,11 @@ Try [Thoughts-Storage](https://thoughts-storage.netlify.app/) for free.
 
 ## Features
 
-- **Fast** 🕒 - Generate any type of form for the short period.
+- 🕒 **Fast** - Generate any type of form for the short period.
 
-- **Clear** ✨ - Track the form responses one by one or see statistics of answers.
+- ✨ **Clear** - Track the form responses one by one or see statistics of answers.
 
-- **Multipurpose** 👀 - Get JSON and POST request of your form and connect it to web, desktop, android or ios application.
+- 👀 **Multipurpose** - Get JSON and POST request of your form and connect it to web, desktop, android or ios application.
 
 ## Repositories
 
