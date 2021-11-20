@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://github.com/omiaow/thoughts-storage/blob/main/LICENSE" target="blank">
-    <img src="https://img.shields.io/github/license/omiaow/thoughts-storage?style=flat-square" alt="thoughts-storage" />
+    <img src="https://img.shields.io/github/license/omiaow/thoughts-storage-front-end?style=flat-square" alt="thoughts-storage" />
   </a>
 </p>
 
@@ -16,7 +16,7 @@
 
 - Receive POST API request code.
 
-- See your form responses and statistics.
+- See your form responses and statistics 📊.
 
 ## 🚀 Demo
 
@@ -24,11 +24,11 @@ Try [Thoughts-Storage](https://thoughts-storage.netlify.app/) for free.
 
 ## Features
 
-- **Fast** - Generate any type of form for the short period.
+- **Fast** 🕒 - Generate any type of form for the short period.
 
-- **Clear** - Track the form responses one by one or see statistics of answers.
+- **Clear** ✨ - Track the form responses one by one or see statistics of answers.
 
-- **Multipurpose** - Get JSON and POST request of your form and connect it to web, desktop, android or ios application.
+- **Multipurpose** 👀 - Get JSON and POST request of your form and connect it to web, desktop, android or ios application.
 
 ## Repositories
 
