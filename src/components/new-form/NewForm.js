@@ -9,6 +9,8 @@ import Error from "../tools/Error";
 import AuthContext from '../../context/AuthContext';
 import useHttp from "../../hooks/http.hook";
 
+import templates from "../../utils/templates.json";
+
 import "../../styles/forms.css";
 import "../../styles/form-types.css";
 
@@ -20,6 +22,14 @@ class NewForm extends React.Component {
       listOfForms: []
     },
     draggedCard: undefined
+  }
+
+  componentDidMount() {
+    const queryString = require('query-string');
+    const parsed = queryString.parse(this.props.history.location.search);
+    if (parsed.id) {
+      this.setState({form: templates[parsed.id]});
+    }
   }
 
   // adding new form card

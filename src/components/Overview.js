@@ -5,10 +5,12 @@ import Loader from "./tools/Loader";
 import AuthContext from "../context/AuthContext";
 import useHttp from "../hooks/http.hook";
 
+import templates from "../utils/templates.json";
+
 import "../styles/overview.css";
 
 
-const SignIn = (props) => {
+const Overview = (props) => {
   const { loading, request } = useHttp();
   const auth = React.useContext(AuthContext);
 
@@ -38,6 +40,17 @@ const SignIn = (props) => {
     return jsxForms;
   }
 
+  const renderTemplates = () => {
+    let listOfTemplates = [];
+    templates.forEach((template, id) => listOfTemplates.push(
+      <span className="template" key={id}
+            onClick={() => props.history.push({pathname: "/NewForm", search: `?id=${id}`})}>
+            {template.name}
+      </span>
+    ));
+    return <div className="view">{listOfTemplates}</div>
+  }
+
   if (loading) {
     return <Loader/>
   }
@@ -45,14 +58,7 @@ const SignIn = (props) => {
   return (
     <div className="overview">
       <h2>Templates</h2>
-      <div className="view">
-        <span className="template">Website Feedback</span>
-        <span className="template">Job Application</span>
-        <span className="template">Event Registration</span>
-        <span className="template">Online Order</span>
-        <span className="template">Account Signup</span>
-        <span className="template">Sales Contact</span>
-      </div>
+      {renderTemplates()}
       <h2>Overview</h2>
       <div className="view">
         {renderForms()}
@@ -62,4 +68,4 @@ const SignIn = (props) => {
   );
 }
 
-export default SignIn;
+export default Overview;

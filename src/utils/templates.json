@@ -1,0 +1,314 @@
+[
+  {
+    "name": "Feedback",
+    "listOfForms": [
+      {
+        "isImportant": false,
+        "name": "radio",
+        "title": "How would you rate your experience?",
+        "options": [
+          {
+            "isTrue": false,
+            "title": "Excellent"
+          },
+          {
+            "isTrue": false,
+            "title": "Good"
+          },
+          {
+            "isTrue": false,
+            "title": "Normal"
+          },
+          {
+            "isTrue": false,
+            "title": "Bad"
+          },
+          {
+            "isTrue": false,
+            "title": "Worst"
+          }
+        ]
+      },
+      {
+        "isImportant": false,
+        "name": "paragraph",
+        "title": "Tell us about your experience:",
+        "text": ""
+      },
+      {
+        "isImportant": false,
+        "name": "check",
+        "title": "Where did you hear about our website?",
+        "options": [
+          {
+            "isTrue": false,
+            "title": "Link from another web site"
+          },
+          {
+            "isTrue": false,
+            "title": "Online news service"
+          },
+          {
+            "isTrue": false,
+            "title": "Friend"
+          },
+          {
+            "isTrue": false,
+            "title": "Search engine"
+          },
+          {
+            "isTrue": false,
+            "title": "Advertisement"
+          },
+          {
+            "isTrue": false,
+            "title": "Other"
+          }
+        ]
+      },
+      {
+        "isImportant": false,
+        "name": "radio",
+        "title": "Do you wanna use this website in the future?",
+        "options": [
+          {
+            "isTrue": false,
+            "title": "Yes"
+          },
+          {
+            "isTrue": false,
+            "title": "No"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Contact information",
+    "listOfForms": [
+      {
+        "isImportant": false,
+        "name": "text",
+        "title": "Full name:",
+        "text": ""
+      },
+      {
+        "isImportant": false,
+        "name": "text",
+        "title": "E-mail:",
+        "text": ""
+      },
+      {
+        "isImportant": false,
+        "name": "text",
+        "title": "Address:",
+        "text": ""
+      },
+      {
+        "isImportant": false,
+        "name": "text",
+        "title": "Phone number:",
+        "text": ""
+      },
+      {
+        "isImportant": false,
+        "name": "paragraph",
+        "title": "Comments:",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "name": "Examination",
+    "listOfForms": [
+      {
+        "isImportant": true,
+        "name": "text",
+        "title": "Name:*",
+        "text": ""
+      },
+      {
+        "isImportant": true,
+        "name": "text",
+        "title": "E-mail:*",
+        "text": ""
+      },
+      {
+        "isImportant": true,
+        "name": "check",
+        "title": "First question*",
+        "options": [
+          {
+            "isTrue": false,
+            "title": "Correct option"
+          },
+          {
+            "isTrue": false,
+            "title": "Option 2"
+          },
+          {
+            "isTrue": false,
+            "title": "Correct option"
+          },
+          {
+            "isTrue": false,
+            "title": "Option 4"
+          }
+        ]
+      },
+      {
+        "isImportant": true,
+        "name": "radio",
+        "title": "Second question*",
+        "options": [
+          {
+            "isTrue": false,
+            "title": "Option 1"
+          },
+          {
+            "isTrue": false,
+            "title": "Correct option"
+          },
+          {
+            "isTrue": false,
+            "title": "Option 3"
+          },
+          {
+            "isTrue": false,
+            "title": "Option 4"
+          }
+        ]
+      },
+      {
+        "isImportant": true,
+        "name": "text",
+        "title": "Third question:*",
+        "text": ""
+      },
+      {
+        "isImportant": false,
+        "name": "paragraph",
+        "title": "Fourth question:",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "name": "Invitation",
+    "listOfForms": [
+      {
+        "isImportant": true,
+        "name": "text",
+        "title": "Your name:*",
+        "text": ""
+      },
+      {
+        "isImportant": true,
+        "name": "radio",
+        "title": "Will you come?*",
+        "options": [
+          {
+            "isTrue": false,
+            "title": "Yes"
+          },
+          {
+            "isTrue": false,
+            "title": "No"
+          }
+        ]
+      },
+      {
+        "isImportant": false,
+        "name": "text",
+        "title": "How many guests will come, including you?",
+        "text": ""
+      },
+      {
+        "isImportant": false,
+        "name": "text",
+        "title": "Do you have allergies or special menu requirements?",
+        "text": ""
+      },
+      {
+        "isImportant": false,
+        "name": "text",
+        "title": "Your E-mail address:",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "name": "Event Registration",
+    "listOfForms": [
+      {
+        "isImportant": false,
+        "name": "text",
+        "title": "Your name:",
+        "text": ""
+      },
+      {
+        "isImportant": true,
+        "name": "text",
+        "title": "E-mail address:*",
+        "text": ""
+      },
+      {
+        "isImportant": true,
+        "name": "check",
+        "title": "What days will you attend the event?*",
+        "options": [
+          {
+            "isTrue": false,
+            "title": "Day - 1"
+          },
+          {
+            "isTrue": false,
+            "title": "Day - 2"
+          },
+          {
+            "isTrue": false,
+            "title": "Day - 3"
+          }
+        ]
+      },
+      {
+        "isImportant": true,
+        "name": "radio",
+        "title": "Menu requirements:*",
+        "options": [
+          {
+            "isTrue": false,
+            "title": "None"
+          },
+          {
+            "isTrue": false,
+            "title": "Vegetarian dishes"
+          },
+          {
+            "isTrue": false,
+            "title": "Kosher meals"
+          },
+          {
+            "isTrue": false,
+            "title": "Gluten Free Dishes"
+          },
+          {
+            "isTrue": false,
+            "title": "Halal"
+          }
+        ]
+      },
+      {
+        "isImportant": true,
+        "name": "check",
+        "title": "I understand that on arrival I will need to pay a fee of N USD.*",
+        "options": [
+          {
+            "isTrue": false,
+            "title": "Yes"
+          }
+        ]
+      }
+    ]
+  }
+]
