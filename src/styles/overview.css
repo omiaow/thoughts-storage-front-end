@@ -1,8 +1,25 @@
 .overview {
   float: left;
   width: 100%;
-  min-height: calc(100vh - 60px); /* subtract navigation bar */
+  min-height: calc(100vh - 120px); /* subtract navigation bar and footer */
   background-color: #1f2933;
+}
+
+.footer {
+  color: white;
+  float: left;
+  padding: 0 5%;
+  width: 90%; /* subtract padding */
+  height: 60px;
+  background-color: #1f2933;
+}
+
+.footer a, .footer span {
+  width: 100%;
+  font-size: 15px;
+  float: left;
+  color: white;
+  margin-top: 5px;
 }
 
 .overview h2 {

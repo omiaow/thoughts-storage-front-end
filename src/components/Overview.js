@@ -56,15 +56,21 @@ const Overview = (props) => {
   }
 
   return (
-    <div className="overview">
-      <h2>Templates</h2>
-      {renderTemplates()}
-      <h2>Overview</h2>
-      <div className="view">
-        {renderForms()}
-        <span className="card" onClick={() => props.history.push({pathname: "/NewForm"})}>New form</span>
+    <>
+      <div className="overview">
+        <h2>Templates</h2>
+        {renderTemplates()}
+        <h2>Overview</h2>
+        <div className="view">
+          {renderForms()}
+          <span className="card" onClick={() => props.history.push({pathname: "/NewForm"})}>New form</span>
+        </div>
       </div>
-    </div>
+      <div className="footer">
+        <a href={`${window.location.origin}/Form?id=61a124e5ab787815d9217c4e`}>Leave a Feedback</a>
+        <span>&#169; 2020 Thoughts Storage - Form generating application</span>
+      </div>
+    </>
   );
 }
 
