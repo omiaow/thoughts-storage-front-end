@@ -4,6 +4,7 @@ import Loader from "../tools/Loader";
 import Answers from "./Answers";
 import EachAnswer from "./EachAnswer";
 import Api from "./Api";
+import Npm from "./Npm";
 
 import AuthContext from "../../context/AuthContext";
 import useHttp from "../../hooks/http.hook";
@@ -79,6 +80,7 @@ const Details = (props) => {
         <span className={(pages === "Responses") ? "button-on" : "button-off"} onClick={() => setPage("Responses")}>Responses</span>
         <span className={(pages === "EachAnswer") ? "button-on" : "button-off"} onClick={() => setPage("EachAnswer")}>Each answer</span>
         <span className={(pages === "API") ? "button-on" : "button-off"} onClick={() => setPage("API")}>API</span>
+        <span className={(pages === "NPM") ? "button-on" : "button-off"} onClick={() => setPage("NPM")}>NPM</span>
 
         <span className="button-off" onClick={() => window.open(`${window.location.origin}/Form?id=${id}`, "_blank")}>Form</span>
         <span className="button-off" onClick={() => shareHandle()}>{share}</span>
@@ -95,6 +97,7 @@ const Details = (props) => {
     if (pages === "Responses") return <Answers responseList={responseList} total={total} setResponseId={setResponseId} setPage={setPage}/>;
     else if (pages === "EachAnswer") return <EachAnswer responseFormList={responseFormList} responseId={responseId} setResponseId={setResponseId}/>;
     else if (pages === "API") return <Api id={id}/>;
+    else if (pages === "NPM") return <Npm id={id}/>;
   }
 
   return (

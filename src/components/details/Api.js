@@ -49,11 +49,11 @@ const Api = (props) => {
       <code style={{backgroundColor: (copied === "post") ? "#44635B" : "#323F4B"}}
             onClick={(e) => copy(e.target.innerText, "post")}>
         {`const url = "${window.location.origin}/form/submit";`}<br/>
-        {`const data = {"method": "POST", "form": jsonForm};`}<br/><br/>
-        {`fetch(url, data)`}<br/>
+        {`const headers = {"Content-Type": "application/json"}; //important`}<br/>
+        {`const body = JSON.stringify(jsonForm);`}<br/><br/>
+        {`fetch(url, { method, body, headers })`}<br/>
         {`.then(res => console.log(response))`}<br/>
-        {`.catch(err => console.error(err));`}<br/><br/><br/>
-        {`/* After submission, you can see responses on current website */`}
+        {`.catch(err => console.error(err));`}
       </code>
     </>
   );
