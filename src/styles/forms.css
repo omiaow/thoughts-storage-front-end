@@ -5,6 +5,12 @@
   background-color: #1f2933;
 }
 
+.forms .notice {
+  margin-top: 30vh;
+  color: white;
+  text-align: center;
+}
+
 .new-form {
   float: left;
   width: 100%;

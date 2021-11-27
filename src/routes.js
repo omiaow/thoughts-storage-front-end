@@ -6,6 +6,7 @@ import OpeningPage from "./components/OpeningPage";
 import CreateAccount from "./components/CreateAccount";
 import SignIn from "./components/SignIn";
 import NewPassword from "./components/NewPassword";
+import Confirm from "./components/Confirm";
 import Overview from "./components/Overview";
 import Details from "./components/details/Details";
 import Form from "./components/Form";
@@ -30,6 +31,7 @@ const useRoutes = isAuthenticated => {
         <Route exact path="/CreateAccount" component={CreateAccount}/>
         <Route exact path="/SignIn" component={SignIn}/>
         <Route exact path="/NewPassword" component={NewPassword}/>
+        <Route exact path="/Confirm" component={Confirm}/>
         <Route exact path="/Form" component={Form}/>
         <Redirect to="/"/>
       </Switch>
