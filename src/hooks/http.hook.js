@@ -26,7 +26,6 @@ const useHttp = () => {
         setError(data.message || "Something went wrong");
         if (response.status === 401) {
           window.location.replace(`${window.location.origin}/SignIn`);
-          console.log("working");
           auth.logout();
         }
       } else {
