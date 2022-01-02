@@ -7,6 +7,7 @@ import NavigationBar from "./components/NavigationBar";
 import Loader from "./components/tools/Loader";
 
 import "./styles/app.css";
+import "./styles/colors.css";
 
 function App() {
 
@@ -21,8 +22,10 @@ function App() {
   return (
     <AuthContext.Provider value={{ token, userId, login, logout, isAuthenticated }}>
       <BrowserRouter>
-        <NavigationBar/>
-        <main>{ routes }</main>
+        <div data-theme="dark">
+          <NavigationBar/>
+          <main>{ routes }</main>
+        </div>
       </BrowserRouter>
     </AuthContext.Provider>
   );

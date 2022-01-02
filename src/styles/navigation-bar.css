@@ -1,7 +1,7 @@
 header {
   width: 100%;
   float: left;
-  background-color: #1f2933;
+  background-color: var(--background);
   height: 60px;
 }
 
@@ -9,7 +9,7 @@ header h1 {
   float: left;
   margin: 15px 0 15px 5%;
   font-size: 25px;
-  color: white;
+  color: var(--font);
   cursor: pointer;
 }
 
@@ -18,10 +18,10 @@ header span {
   float: right;
   min-height: 20px;
   margin: 15px 5%;
-  border: 1px solid white;
+  border: 1px solid var(--button-border);
   border-radius: 5px;
-  background-color: #1f2933;
-  color: white;
+  background-color: var(--button-color);
+  color: var(--button-font);
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
@@ -31,6 +31,7 @@ header span {
 }
 
 header span:hover {
-  background-color: white;
-  color: #1f2933;
+  background-color: var(--button-hovered-color);
+  color: var(--button-hovered-font);
+  border: 1px solid var(--button-hovered-border);
 }

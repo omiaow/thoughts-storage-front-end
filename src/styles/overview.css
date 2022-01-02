@@ -2,16 +2,15 @@
   float: left;
   width: 100%;
   min-height: calc(100vh - 120px); /* subtract navigation bar and footer */
-  background-color: #1f2933;
+  background-color: var(--background);
 }
 
 .footer {
-  color: white;
   float: left;
   padding: 0 5%;
   width: 90%; /* subtract padding */
   min-height: 50px;
-  background-color: #1f2933;
+  background-color: var(--background);
   padding-bottom: 10px;
 }
 
@@ -19,14 +18,14 @@
   width: 100%;
   font-size: 15px;
   float: left;
-  color: white;
+  color: var(--font);
   margin-top: 5px;
 }
 
 .overview h2 {
   width: 84%;
   margin: 30px 8% 5px 8%;
-  color: white;
+  color: var(--font);
   font-size: 20px;
   font-family: 'Signika', sans-serif;
 }
@@ -45,7 +44,7 @@
   cursor: pointer;
   margin: 5px 5px;
   padding: 5px;
-  color: white;
+  color: var(--font);
 }
 
 .overview .view .template:hover {
@@ -58,7 +57,7 @@
   width: 110px;
   min-height: 10px;
   float: left;
-  border: 1px solid #3E4C59;
+  border-bottom: 2px solid #3E4C59;
   background-color: #3E4C59;
   border-radius: 5px;
   cursor: pointer;

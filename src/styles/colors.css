@@ -1,0 +1,23 @@
+[data-theme="light"] {
+  --background: #D0D3D4;
+  --font: #1f2933;
+  --button-color: #1f2933;
+  --button-hovered-color: #3E4C59;
+  --button-border: #1f2933;
+  --button-hovered-border: #3E4C59;
+  --button-font: #ffffff;
+  --button-hovered-font: #ffffff;
+  --loader: #1f2933;
+}
+
+[data-theme="dark"] {
+  --background: #1f2933;
+  --font: #ffffff;
+  --button-color: #1f2933;
+  --button-hovered-color: #ffffff;
+  --button-border: #ffffff;
+  --button-hovered-border: #ffffff;
+  --button-font: #ffffff;
+  --button-hovered-font: #1f2933;
+  --loader: #ffffff;
+}
